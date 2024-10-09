@@ -1,0 +1,7 @@
+1. Set the admin profile now it's not fetched from the database
+2. traiter toutes les parties du methode GET pour ne pas entrer ce qu'on veut
+3. Moving files for sending message admin part 
+4. Design a part to give off for employee (employee part)
+7. in my project online shoes storing management system remove the background gradient 
+8. add the functionality of verifying the password before modifying the user profile in my project 
+9. Rearrange the quwrries and continue with save modification employees

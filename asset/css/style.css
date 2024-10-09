@@ -1,0 +1,519 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Kaisei Tokumin", serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Sulphur Point", sans-serif;
+}
+
+
+/* Preloader */
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/hero-bg.png) top center no-repeat;
+    background-size: cover;
+}
+
+.spinner i {
+    font-size: 2.5rem;
+    color: #37517e;
+    animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* --------------------------
+#Header 
+--------------------------- */
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    padding: 15px 50px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2000;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+header .header-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header .header-content a {
+    color: #37517e;
+    transition: color 0.8s ease-in-out, border-bottom 0.8s ease-in-out;
+}
+
+header .header-content a:hover {
+    color: #c6ac6f;
+}
+
+header .header-content .active {
+    border-radius: 3px;
+    border-bottom: 1px solid #37517e;
+}
+
+header .header-content .active:hover {
+    border-bottom: 1px solid #c6ac6f;
+}
+
+header .header-content .login {
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #37517e;
+    transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+header .header-content .login:hover {
+    color: #fff;
+    background-color: #c6ac6f;
+}
+
+header .header-content .social-icon {
+    display: none;
+}
+
+.social-icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    -webkit-column-gap: 10px;
+}
+
+.social-icon a {
+    display: inline-block;
+    margin: 0 4px;
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon a .bi {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.social-icon a.facebook:hover .bi {
+    filter: grayscale(0%);
+    color: #1877F2;
+}
+
+.social-icon a.instagram:hover .bi {
+    filter: grayscale(0%);
+    color: #E1306C;
+}
+
+.social-icon a.linkedin:hover .bi {
+    filter: grayscale(0%);
+    color: #0A66C2;
+}
+
+.social-icon a.youtube:hover .bi {
+    filter: grayscale(0%);
+    color: #FF0000;
+}
+
+.exit {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+/* Section */
+
+.general-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 10px;
+    -webkit-column-gap: 10px;
+    align-items: center;
+    padding: 0px 100px;
+    background: url(../images/hero-bg.png) top center no-repeat;
+    background-size: cover;
+}
+
+.general-section .text-box h2 {
+    color: #37517e;
+}
+
+.general-section .text-box p {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.general-section .text-box .login {
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition-delay: 0.4s;
+    transition: 0.8s ease-in-out;
+    background-color: #37517e;
+}
+
+.general-section .text-box .login:hover {
+    background-color: #c6ac6f;
+}
+
+.general-section .image-box img {
+    animation: upAndDown 5s infinite;
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+}
+
+@keyframes upAndDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Login page
+--------------------------------------------------------------*/
+
+.login-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/hero-bg.png')top center no-repeat;
+    background-size: cover;
+}
+
+.login-section .login-content {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #d4dbdf4e;
+    box-shadow: 0px 1px 10px rgba(73, 73, 73, 0.114);
+}
+
+.login-section .container {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.login-section .login-text {
+    display: flex;
+    gap: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #37517e;
+}
+
+.login-section .login-form {
+    padding: 60px 25px;
+    background-color: #fff;
+}
+
+.login-section .login-form h3 {
+    color: #37517e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-section .login-form .inputs {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    align-items: center;
+    border-radius: 20px;
+    -webkit-column-gap: 5px;
+    background-color: #f4f4f4;
+}
+
+.login-section .login-form .inputs i {
+    color: #37517e;
+}
+
+.login-section .login-form .input-submit {
+    margin-top: 20px;
+}
+
+.login-section .login-form .input-submit input {
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: #37517e;
+}
+
+.login-section .login-form input {
+    border: none;
+    outline: none;
+    background: unset;
+    font-family: "Sulphur Point", sans-serif;
+}
+
+.login-section .forgot-password {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.login-section .forgot-password a {
+    color: #37517e;
+    font-size: 14px;
+}
+
+.login-section .create-account {
+    display: flex;
+    gap: 4px;
+    font-size: 14px;
+    margin-top: 20px;
+    justify-content: center;
+    -webkit-column-gap: 4px;
+}
+
+.login-section .create-account a {
+    color: #37517e;
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 14px;
+    background-color: #37517e;
+}
+
+footer a {
+    color: #d2d2d2;
+}
+
+
+/*-------------------------------
+#MEDIA QUERIES
+--------------------------------*/
+
+@media screen and (max-width: 1170px) {
+    .general-section .image-box img {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    header {
+        padding: 15px 30px;
+    }
+    .general-section {
+        padding: 0px 60px;
+    }
+}
+
+@media screen and (max-width: 931px) {
+    .general-section .image-box img {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .login-section .login-text {
+        padding: 5px 5px;
+    }
+    .login-section {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .general-section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .general-section .text-box p {
+        width: 100%;
+    }
+    .text-box .login {
+        display: flex;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    header {
+        padding: 15px;
+    }
+    header .header-content {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        right: 40px;
+        height: 80vh;
+        align-items: flex-start;
+        padding: 60px 40px;
+        background-color: #fff;
+        transform: translateX(-120%);
+        transition: transform 0.3s ease;
+        z-index: 2001;
+    }
+    header .header-content.active {
+        transform: translateX(0);
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+    }
+    .overlay.active {
+        display: block;
+    }
+    header .header-content .social-icon {
+        display: initial;
+    }
+    .icons {
+        display: none;
+    }
+    .exit {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 2002;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .menu {
+        display: block;
+    }
+    .social-icon a {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .login-section .container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .login-section .login-text {
+        padding: 45px 20px;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    header {
+        padding: 15px 20px;
+    }
+    .general-section {
+        padding: 0px 20px;
+    }
+    header .header-content {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        height: 79vh;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        background-color: #fff;
+        box-shadow: 0px 1px 10px hsl(0, 20%, 91%);
+    }
+    footer {
+        position: static;
+        bottom: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .general-section h2 {
+        margin-top: 100px;
+    }
+}
